@@ -1,0 +1,9 @@
+ul a.active{
+    font-weight: 900;
+    background-color: antiquewhite;
+}
+ul a{
+    margin: 0 5px;
+    padding: 5px 12px;
+    border-radius: 7px;
+}
