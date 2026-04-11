@@ -6,8 +6,8 @@ const Nav = () => {
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/listedBooks">Listed Books</NavLink>
+      <NavLink to="/pageToRead">Page to Read</NavLink>
     </>
   );
 
@@ -40,7 +40,7 @@ const Nav = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="font-extrabold text-xl">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
