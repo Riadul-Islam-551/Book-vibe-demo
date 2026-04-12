@@ -1,12 +1,14 @@
-import React from 'react'
-import Banner from '../../components/banner/Banner'
+import React from "react";
+import Banner from "../../components/banner/Banner";
+import BooksFetching from "../../components/booksFetching/BooksFetching";
 
 const Home = () => {
   return (
     <>
-    <Banner></Banner>
+      <Banner></Banner>
+      <BooksFetching></BooksFetching>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
