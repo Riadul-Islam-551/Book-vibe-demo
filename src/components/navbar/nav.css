@@ -1,6 +1,7 @@
 ul a.active{
     font-weight:600;
-    border: 2px solid green;
+    border: 2px solid #b9f5b9;
+    color: #089108;
 }
 ul a{
     margin: 0 5px;

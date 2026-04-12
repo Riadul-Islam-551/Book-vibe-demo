@@ -45,8 +45,9 @@ const Nav = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end space-x-2">
+          <button className="btn btn-soft btn-success">Sign in</button>
+          <button className="btn btn-soft btn-info">Sign up</button>
         </div>
       </div>
     </div>
