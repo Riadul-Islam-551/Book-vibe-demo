@@ -9,7 +9,6 @@ const BookDetails = () => {
   const selectedBook = books.find((book) => book.bookId == Number(id));
   console.log(selectedBook);
   const {
-    bookId,
     bookName,
     author,
     image,
@@ -22,25 +21,21 @@ const BookDetails = () => {
     yearOfPublishing,
   } = selectedBook;
   return (
-    <div className="card lg:card-side max-w-300 mx-auto bg-base-100 shadow-sm">
-      <figure>
-        <img
-          src={image}
-          alt="Album"
-          className="max-w-100 p-20 bg-base-300 rounded-2xl"
-        />
+    <div className="mt-9 grid grid-cols-1 lg:grid-cols-2 max-w-300 mx-auto bg-base-100">
+      <figure className="flex justify-center items-center p-20 bg-base-300 rounded-2xl">
+        <img src={image} alt={bookName} className="max-w-75 rounded-2xl" />
       </figure>
-      <div className=" p-6">
-        <h2 className="card-title">{bookName}</h2>
-        <p>By: {author}</p>
+      <div className="p-6 space-y-3">
+        <h2 className="font-bold text-2xl">{bookName}</h2>
+        <p className="font-bold">By: {author}</p>
         <h5 className="py-3 border border-l-0 border-r-0 border-gray-400">
           {category}
         </h5>
-        <p>
+        <p className="text-secondary text-sm">
           <span className="font-bold">Review:</span>
           {review}
         </p>
-        <p className="flex justify-start items-center">
+        <p className="flex justify-start items-center gap-2 my-3">
           <span className="font-bold">Tags:</span>
           {tags.map((tag, ind) => (
             <p
@@ -51,8 +46,25 @@ const BookDetails = () => {
             </p>
           ))}
         </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Listen</button>
+        <div className="space-y-2 py-7 text-sm border-t-2 border-gray-300">
+          <p className="font-bold">
+            <span className="text-secondary">Number of pages:</span>{" "}
+            {totalPages}
+          </p>
+          <p className="font-bold">
+            <span className="text-secondary">Publisher:</span> {publisher}
+          </p>
+          <p className="font-bold">
+            <span className="text-secondary">Year of Publishing:</span>{" "}
+            {yearOfPublishing}
+          </p>
+          <p className="font-bold">
+            <span className="text-secondary">Rating:</span> {rating}
+          </p>
+        </div>
+        <div className="card-actions justify-start ">
+          <button className="btn">Read</button>
+          <button className=" btn btn-info text-white">Wishlist</button>
         </div>
       </div>
     </div>
