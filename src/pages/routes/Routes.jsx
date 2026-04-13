@@ -3,6 +3,7 @@ import Root from "../root/Root";
 import Home from "../home/Home";
 import ListedBook from "../listedBook/ListedBook";
 import PageToLoad from "../pagetoLoad/PageToLoad";
+import BookDetails from "../bookDetails/BookDetails";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
       {
         path: "pageToRead",
         element: <PageToLoad></PageToLoad>,
+      },
+      {
+        loader: () => fetch("./booksData.json"),
+        path: "/bookDetails/:id",
+        element: <BookDetails></BookDetails>,
       },
     ],
   },
